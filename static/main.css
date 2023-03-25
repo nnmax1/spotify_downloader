@@ -1,0 +1,358 @@
+/* CSS Document */
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+/*-----------General & Basic Styles------------*/
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+   /* background-color: #2d2d2d; 
+    color: #ffc266;
+    */
+    font-family: 'Roboto', sans-serif;
+}
+* {
+	font-family: Lato;/*-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 15.5px;
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+a:hover {
+    cursor: pointer;
+    cursor: hand;
+    text-decoration: none;
+}
+.row{
+    padding-left:15px;
+    padding-right:15px;
+}
+
+
+/*-----------content------------*/
+
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 10px 0;
+}
+.card h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    line-height: 40px;
+    margin: 0 40px 10px;
+    text-align: center;
+    font-weight: 500;
+}
+.card h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+    color: #999;
+    font-weight: 600;
+}
+.inputform {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.url-input {
+    width: 100%;
+    border: 1px solid #efefef;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0px;
+    outline: none;
+    /*overflow: hidden;*/
+    padding: 9px 0 7px 8px;
+    /*text-overflow: ellipsis;*/
+    background: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+.url-input select {
+    border-radius: 10%; 
+    width: 80%;
+}
+.url-input:focus {
+    border: 1px solid #b2b2b2;
+}
+.submit-button {
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    background: #25c15e;
+    border-color: #25c15e;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.advertisement {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 10px 0;
+    margin-top:50px;
+}
+.advertisement p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 90px;
+    text-align: center;
+    font-weight: 500;
+}
+.resultdiv {
+    margin-top: 25px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    padding: 10px 0;
+}
+.profileheader {
+    height: 55px;
+    border-bottom: 1px solid #efefef;
+    padding-top:5px;
+}
+.profilepic {
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    position: absolute;
+}
+.profilename,
+.username {
+    margin-left: 65px;
+    margin-top: 10px;
+}
+.profilename {
+    font-weight: bolder;
+    color: #3d3b3b;
+}
+.downloadimage {
+    width: 100%;
+    height: auto;
+}
+/*.downloadbutton {
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #25c15e;
+    border-color: #25c15e;
+    color: #fff;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 6px;
+padding-right: 6px;
+}*/
+
+.downloadbutton {
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #25c15e;
+    border-color: #fff;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.downloadmusicbutton{
+	cursor: pointer;
+-webkit-appearance: none;
+border-radius: 3px;
+border-style: solid;
+border-width: 1px;
+font-size: 14px;
+font-weight: 300;
+line-height: 30px;
+outline: none;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+background: #3897f0;
+border-color: #3897f0;
+color: #fff;
+margin-top: 0px;
+margin-right: 10px;
+margin-bottom: 30px;
+padding: 0px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.downloadmusicbutton:hover {
+    color: #fff;
+}
+.downloadmusicbutton:focus {
+    color: #fff;
+    -webkit-appearance: none;
+}
+.download-info{
+	margin-top: 15px;
+padding-left: 13px;
+}
+.downloadbutton:hover {
+    color: #fff;
+}
+.downloadbutton:focus {
+    color: #fff;
+    -webkit-appearance: none;
+}
+.resultdiv {
+    display: none;
+}
+
+.post-info{
+    padding:10px;
+}
+.post-info p{
+    font-size: 19px;
+}
+.about{
+    margin-top:50px;
+      padding:20px;
+}
+.features{
+    margin-top:50px;
+
+}
+.features .card-body{
+    padding:30px;
+}
+.features .text-info{
+   font-size: 19px;
+padding: 5px;
+}
+.features .fa{
+color:#25c15e;
+}
+.steps{
+    margin-top:50px;
+    margin-bottom:150px;
+}
+.steps .card-body{
+    padding:30px;
+}
+.steps .text-info{
+   font-size: 19px;
+padding: 5px;
+font-weight:bold;
+
+}
+.steps .text-secondary{
+font-weight:bold;
+}
+.steps .fa{
+color:#25c15e;
+}
+.content-div{
+    margin-top:100px;
+    margin-bottom:150px
+}
+.content-div h2{
+    text-align: left;
+color: black;
+margin-left: 0px;
+}
+/*-----------Footer------------*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #CCC;
+    background-color: #fff;
+    border-top: 1px solid #e6e6e6;
+}
+footer p {
+    padding: 10.5px;
+    margin: 0px;
+
+}
+
+
+
+/*-----------------------*/
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+/****************************/
+
+button,input,optgroup,select,textarea{
+    margin:0;
+    color:inherit;
+    font:inherit
+}
+button{
+    overflow:visible;
+    border:none
+}
+button,select{
+    text-transform:none
+}
+button,html input[type=button],input[type=reset],input[type=submit]{
+    cursor:pointer;
+    -webkit-appearance:button
+}
+button[disabled],html input[disabled]{
+    cursor:default
+}
+button::-moz-focus-inner,input::-moz-focus-inner{
+    padding:0;
+    border:0
+}
+
+ 

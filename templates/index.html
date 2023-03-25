@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %} spotify_dl {% endblock %}
+
+{% block content %}
+ <!-- container-fluid -->
+<div class="container">
+    <!-- row -->
+    <div class="row header">
+        <!-- col -->
+        <div class="col-md-8 col-md-offset-2 card">
+            <!-- header -->
+            <div class="text-center">
+            
+                <form action="/" method="POST" class="col-md-10 col-md-offset-1 inputform">
+                <h1 style="margin:5px;">Spotify Downloader</h1>
+ 
+                <input type="text" id="url" name="spotifyTrackUrl" class="url-input" value="" placeholder="Spotify Track URL">
+                
+                <input id="download" type='submit' class="submit-button" value='Download'> 
+                 
+                </form>               
+                <p>                
+                    {% with messages = get_flashed_messages() %}
+       {% if messages %}
+          {% for message in messages %}
+              <h1 style="margin:5px;">{{ message }}</h1>
+
+          {% endfor %}
+       {% endif %}
+    {% endwith %}
+                </p> 
+            </div>
+        
+            <!-- header end. -->
+        </div>
+        <!-- col end. -->
+    </div>
+
+
+<div class="row" id="contact">
+    <div class="col-md-8 col-md-offset-2 card about">
+        <h1>About</h1>
+        <p style="text-align:center;">
+            Download your favority spotify tracks
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="text-center">
+        <div id="adngin-In-content_1-0"></div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="text-center">
+            <div id="adngin-In-content_2-0"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<br><br>
+{% endblock %}
+
+

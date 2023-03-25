@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <style>
+        .btn-container { display: inline-block!important; white-space: nowrap; min-width: 140px; } a.kofi-button { box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); line-height: 36px!important; min-width: 150px; display: inline-block!important; background-color: #29abe0; padding: 1px 8px!important;     margin: 10px; text-align: center !important; border-radius: 7px; color: #fff; cursor: pointer; overflow-wrap: break-word; vertical-align: middle; border: 0 none #fff !important; font-family: 'Quicksand',Helvetica,Century Gothic,sans-serif !important; text-decoration: none; text-shadow: none; font-weight: 700!important; font-size: 14px !important; } .kofitext img.kofiimg { height: 15px!important; width: 22px!important; display: initial; animation: kofi-wiggle 3s infinite; } img.kofiimg { display: initial!important; vertical-align: middle; height: 13px!important; width: 20px!important; padding-top: 0!important; padding-bottom: 0!important; border: none; margin-top: 0; margin-right: 5px!important; margin-left: 0!important; margin-bottom: 3px!important; content: url(https://storage.ko-fi.com/cdn/cup-border.png); }
+
+    </style>
+
+    <meta charset="UTF-8">
+
+    <title>{% block title %}{% endblock %}</title>
+    <meta name='description' content='nnmax1'>
+    
+    <meta name="Keywords" content="nnmax1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+    <link rel="stylesheet"  href="{{ url_for('static', filename='main.css') }}">
+ 
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <script  src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-default no-mrg">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" title="nnmax1" style="font-weight:bold;color:#000;">nnmax1</a>
+    
+    
+                </div>
+    
+                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/page1">Page1</a></li>
+                        <li><a href="/page2">Page2</a></li>
+                     </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<style>
+    .left_sidebar{
+        left: 0px;
+        margin-top:70px;
+        margin-left: 10px;
+        position: fixed;
+        text-align: center;
+        top: 0px;
+    }
+
+    .right_sidebar{
+        right: 0px;
+        margin-top:70px;
+        margin-right: 10px;
+        position: fixed;
+        text-align: center;
+        top: 0px;
+    }
+
+
+</style>
+
+
+
+<script>
+
+    $(window).on('resize', function() {
+        if ($(window).width()<990) {
+           $( ".left_sidebar" ).hide();
+           $( ".right_sidebar" ).hide();
+        } else {
+            $( ".left_sidebar" ).show();
+            $( ".right_sidebar" ).show();
+        }
+    });
+     
+    $(document).ready(function(){
+      var Z = 10000;
+      $(".left_sidebar").each(function(){
+        //$(this).css("z-index", Z--);
+      });
+
+      $(window).scroll(function(e){
+        $(".left_sidebar").each(function(){
+            var ScrollHeight = $(this).offset().top - $(window).scrollTop();
+            if(ScrollHeight < 0 && $(this).css("top") == "0px")
+              $(this).css("top", "-70px");
+            else if(ScrollHeight >= -70 && $(this).css("top") == "-70px")
+              $(this).css("top", "0px");
+        });
+      });
+    });
+     
+</script>
+
+
+{% block content %}
+
+{% endblock %}
+    
+{% block footer %} 
+<footer>
+    <p>© 2022 <a href="https://github.com/nnmax1">nnmax1</a>, All rights reserved. | <a href="privacy">Privacy Policy</a> | <a href="terms">Terms</a> 
+</footer>
+{% endblock %}
+
+
+ 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="assets/js/bootstrap.min.js"></script>-->
+
+</body>
+</html>
+
