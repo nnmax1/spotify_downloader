@@ -11,9 +11,11 @@
 <p> 
 Step 1. You need to get credentials to use Spotify Web API.  
 https://developer.spotify.com/documentation/web-api/
-<br>
-Step 2. Copy and paste your credentials to the C_ID and C_SECRET variables in main.py 
-<br>
+<br><br>
+Step 2. Copy and paste your credentials to the C_ID and C_SECRET variables in app.py 
+<pre>
+sp_creds={'C_ID':YOUR_C_ID, 'C_SECRET':YOUR_C_SECRET}
+</pre>
 Step 3. install python3 dependencies (you also need ffmpeg for youtube-dl)
 <pre>
 pip install -r requirements.txt

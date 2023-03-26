@@ -8,13 +8,15 @@ from download_spotify import downloadTrack
 app = Flask(__name__, template_folder='templates') 
 app.config['SECRET_KEY'] = 'rhdj3hcuiehiqwehrcui23hquiechihrui23hrceui32hcuirhc'
 
+
 # Need to get ID and SECRET to access Spotify Web API
-sp_creds={'C_ID':'PUT YOUR C_ID HERE', 'C_SECRET':'PUT YOUR C_SECRET HERE'}
+sp_creds={'C_ID':YOUR_C_ID, 'C_SECRET':YOUR_C_SECRET}
+
+
 
 @app.route('/', methods=['POST', 'GET'])
 def homepage():
-    #data= memeAPI('cityporn','https://i.imgur.com/zIo0fIT.jpg')
-
+ 
     if request.method == 'POST':
         url = request.form['spotifyTrackUrl']
 
@@ -27,7 +29,8 @@ def homepage():
 
         res=downloadTrack(sp_creds,url, 'downloads')
         
-        flash(res['error'])   
+        flash(res['error']) 
+          
         return redirect('/')
 
     return render_template('index.html')  
